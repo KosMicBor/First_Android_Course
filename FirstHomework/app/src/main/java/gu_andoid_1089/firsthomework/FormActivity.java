@@ -1,24 +1,24 @@
 package gu_andoid_1089.firsthomework;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class FormActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exerciseone_activity_main);
+        setContentView(R.layout.filling_form_layout);
+        Button backButton = findViewById(R.id.backButton);
 
-        Button goToFormButton = findViewById(R.id.goToFormButton);
-        goToFormButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FormActivity.class);
+                Intent intent = new Intent(FormActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
